@@ -14,5 +14,5 @@ or on linux with:
 sudo apt-get install ispell
 ```
 
-## anagram checker
+## anagram.js
 - JavaScript code that compares two strings and check if they are anagrams or not
