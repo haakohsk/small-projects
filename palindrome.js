@@ -1,9 +1,9 @@
 palindromeChecker = (word) => {
-    let input = 'racecar'; // insert word for check
-    let string = word.split('').reverse().join('');
+    // stores the reversed word in a variable 'reverseWord'
+    let reverseWord = word.split('').reverse().join('');
 
-    if (string == input) {
-        console.log('Is an palindrome');
+    if (reverseWord == word) {
+        console.log('Is a palindrome');
         return true;
     } else {
         console.log('Not a palindrome')
