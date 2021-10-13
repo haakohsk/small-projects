@@ -16,3 +16,6 @@ sudo apt-get install ispell
 
 ## anagram.js
 - JavaScript code that compares two strings and check if they are anagrams or not
+
+## palindrome.js
+- JavaScript code that checks if string is palindrome *(same word in reverse)*
