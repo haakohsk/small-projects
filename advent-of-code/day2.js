@@ -2,7 +2,7 @@
 const fs = require("fs")
 const path = require("path")
 const inputtxt = fs
-	.readFileSync(path.join(__dirname, 'input.txt'), 'utf8')
+	.readFileSync(path.join(__dirname, 'day2-input.txt'), 'utf8')
 	.toString()
 	.trim()
 	.split('\n')
@@ -31,6 +31,25 @@ for (let { movement, amount } of inputtxt) {
 	} else {
         // error?
 		throw new Error(`Unknown movement: ${movement}`);
+	}
+}
+
+console.log(y * x);
+
+// task 2, day two
+
+let aim = 0;
+
+for (let { movement, amount } of inputtxt) {
+	if (movement === 'up') {
+		aim -= amount;
+	} else if (movement === 'down') {
+		aim += amount;
+	} else if (movement === 'forward') {
+		x += amount;
+		y += aim * amount;
+	} else {
+		// throw new Error(`Unknown movement: ${mvmnt}`);
 	}
 }
 
