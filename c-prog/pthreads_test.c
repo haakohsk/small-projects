@@ -14,6 +14,7 @@ void *task(int id) {
     result = result + sin(i) * tan(i);
   }
   printf("Task %d completed with result %e\n", id, result);
+  return 0;
 }
 
 /* Same as 'task', but meant to be called from different threads. */
@@ -23,6 +24,7 @@ void *threaded_task(void *t) {
   task(id);
   printf("Thread %ld done\n", id);
   pthread_exit(0);
+  return 0;
 }
 
 /* Run 'task' num_tasks times serially. */
@@ -31,6 +33,7 @@ void *serial(int num_tasks) {
   for (i = 0; i < num_tasks; i++) {
     task(i);
   }
+  return 0;
 }
 
 /* Run 'task' num_tasks times, creating a separate thread for each
@@ -49,6 +52,7 @@ void *parallel(int num_tasks)
       exit(-1);
     }
   }
+  return 0;
 }
 
 void *print_usage(int argc, char *argv[]) {
