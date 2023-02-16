@@ -7,3 +7,4 @@ require.js
 package.json
 package-lock.json
 input.txt
+.env
