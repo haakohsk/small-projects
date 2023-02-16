@@ -24,7 +24,6 @@ void *threaded_task(void *t) {
   task(id);
   printf("Thread %ld done\n", id);
   pthread_exit(0);
-  return 0;
 }
 
 /* Run 'task' num_tasks times serially. */
