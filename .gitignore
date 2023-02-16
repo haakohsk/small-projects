@@ -9,3 +9,5 @@ package-lock.json
 input.txt
 .env
 combined.py
+.cache
+.cache-akon(hs)
